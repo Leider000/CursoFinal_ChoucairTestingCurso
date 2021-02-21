@@ -26,13 +26,13 @@ public class ChoucairAcademyStepDefinitions {
 
     }
 
-    @When("^he search for the course (.*) on the choucair academy platform$")
-    public void heSearchForTheCourseRecursosAutomatizacionBancolombiaOnTheChoucairAcademyPlatform(String course) throws Exception{
-        OnStage.theActorInTheSpotlight().attemptsTo(Search.the(course));
+    @When("^he search for the course on the choucair academy platform$")
+    public void heSearchForTheCourseRecursosAutomatizacionBancolombiaOnTheChoucairAcademyPlatform(List<AcademyChoucairData> academyChoucairData) throws Exception{
+        OnStage.theActorInTheSpotlight().attemptsTo(Search.the(academyChoucairData.get(0).getStrCourse()));
 
     }
 
-    @Then("^he finds the course called resources (.*)$")
+    @Then("^he finds the course called resources$")
     public void heFindsTheCourseCalledResourcesRecursosAutomatizacionBancolombia(List<AcademyChoucairData> academyChoucairData) throws Exception{
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.ToThe(academyChoucairData.get(0).getStrCourse())));
     }

@@ -7,7 +7,9 @@ Feature: Academy Choucair
         Given than brandon wants to learn automation at the academy Choucair
         | strUser      | strPassword |
         | 1020833396   | Choucair2021*     |
-        When he search for the course Recursos Automatizacion Bancolombia on the choucair academy platform
-        Then he finds the course called resources Recursos Automatizacion Bancolombia
+        When he search for the course on the choucair academy platform
         | strCourse               |
-        | Metodologia Bancolombia |
+        | Metodología Bancolombia |
+        Then he finds the course called resources
+        | strCourse               |
+        | Metodología Bancolombia |
